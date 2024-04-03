@@ -1,0 +1,173 @@
+﻿<Window x:Class="WpfMusicSchool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfMusicSchool"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel>
+                        <TextBlock>student</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <StackPanel>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Button x:Name="ButtonViewStudent" Content="Отображение" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Margin="0 30 0 0" Height="35"  Click="ButtonView_Click"/>
+                            <Button x:Name="ButtonUpdateStudent" Grid.Column="0" Grid.Row="1" Height="25" Content="Обновление" Click="ButtonUpdate_Click"/>
+                            <Button x:Name="ButtonDeleteStudent" Grid.Column="1" Grid.Row="1" Height="25" Content="Удаление" Click="ButtonDelete_Click"/>
+                            <Button x:Name="ButtonSaveStudent" Grid.Column="0" Grid.Row="2" Height="30" Content="Добавление" Grid.ColumnSpan="2" Click="ButtonSave_Click"/>
+                        </Grid>
+                        <DataGrid x:Name="dgStudent"
+                                  ItemsSource="{Binding}" 
+                                  Height="291" 
+                                  Margin="10"
+                                  AutoGenerateColumns="False">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Student Id" IsReadOnly="True" Binding="{Binding ID}"/>
+                                <DataGridTextColumn Header="GroupMusic Id" Binding="{Binding GroupMusicID}"/>
+                                <DataGridTextColumn Header="Specility Id" Binding="{Binding SpecilityID}"/>
+                                <DataGridTextColumn Header="Fio " Binding="{Binding Fio}"/>
+                                <DataGridTextColumn Header="Telephone" Binding="{Binding Telephone}"/>
+                                <DataGridTextColumn Header="Gender" Binding="{Binding Gender}"/>
+                                <DataGridTextColumn Header="Email" Binding="{Binding Email}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem>
+            <!--Отображение работников-->
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel>
+                        <TextBlock>Employee</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <StackPanel>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Button x:Name="ButtonViewEmployee" Content="Отображение" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Margin="0 30 0 0" Height="35"  Click="ButtonView_Click"/>
+                            <Button x:Name="ButtonUpdateEmployee" Grid.Column="0" Grid.Row="1" Height="25" Content="Обновление" Click="ButtonUpdate_Click"/>
+                            <Button x:Name="ButtonDeleteEmployee" Grid.Column="1" Grid.Row="1" Height="25" Content="Удаление" Click="ButtonDelete_Click"/>
+                            <Button x:Name="ButtonSaveEmployee" Grid.Column="0" Grid.Row="2" Height="30" Content="Добавление" Grid.ColumnSpan="2" Click="ButtonSave_Click"/>
+                        </Grid>
+                        <DataGrid x:Name="dgEmployee"
+                                  ItemsSource="{Binding}" 
+                                  Height="323"
+                                  Margin="10"
+                                  AutoGenerateColumns="False">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Employee Id" IsReadOnly="True" Binding="{Binding ID}"/>
+                                <DataGridTextColumn Header="Position Id" Binding="{Binding PositionID }"/>
+                                <DataGridTextColumn Header="Fio" Binding="{Binding Fio}"/>
+                                <DataGridTextColumn Header="Telephone " Binding="{Binding Telephone}"/>
+                                <DataGridTextColumn Header="Gender" Binding="{Binding Gender}"/>
+                                <DataGridTextColumn Header="Experience" Binding="{Binding Experience}"/>
+                                <DataGridTextColumn Header="Email" Binding="{Binding Email}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem>
+            <!--Отображение концертов-->
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel>
+                        <TextBlock>Concert</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <StackPanel>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Button x:Name="ButtonViewConcert" Content="Отображение" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Margin="0 30 0 0" Height="35"  Click="ButtonView_Click"/>
+                            <Button x:Name="ButtonUpdateConcert" Grid.Column="0" Grid.Row="1" Height="25" Content="Обновление" Click="ButtonUpdate_Click"/>
+                            <Button x:Name="ButtonDeleteConcert" Grid.Column="1" Grid.Row="1" Height="25" Content="Удаление" Click="ButtonDelete_Click"/>
+                            <Button x:Name="ButtonSaveConcert" Grid.Column="0" Grid.Row="2" Height="30" Content="Добавление" Grid.ColumnSpan="2" Click="ButtonSave_Click"/>
+                        </Grid>
+                        <DataGrid x:Name="dgConcert"
+                       ItemsSource="{Binding}" 
+                       Height="323"
+                       Margin="10"
+                       AutoGenerateColumns="False">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Concert Id" IsReadOnly="True"  Binding="{Binding ID}"/>
+                                <DataGridTextColumn Header="GroupMusic Id" Binding="{Binding GroupMusicID}"/>
+                                <DataGridTextColumn Header="Genrel Id" Binding="{Binding GenreID}"/>
+                                <DataGridTextColumn Header="Concert Data " Binding="{Binding ConcertDate}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem>
+            <!--Отображение для группы-->
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel>
+                        <TextBlock>GroupMusic</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <StackPanel>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Button x:Name="ButtonViewGroupMusic" Content="Отображение" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Margin="0 30 0 0" Height="35"  Click="ButtonView_Click"/>
+                            <Button x:Name="ButtonUpdateGroupMusic" Grid.Column="0" Grid.Row="1" Height="30" Content="Обновление"  Grid.ColumnSpan="2" Click="ButtonUpdate_Click"/>
+                            <Button x:Name="ButtonSaveGroupMusic" Grid.Column="0" Grid.Row="2" Height="30" Content="Добавление" Grid.ColumnSpan="2" Click="ButtonSave_Click"/>
+                        </Grid>
+                        <DataGrid x:Name="dgGroupMusic"
+                                  ItemsSource="{Binding}" 
+                                  Height="323"
+                                  Margin="10"
+                                  AutoGenerateColumns="False">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="GroupMusic Id" IsReadOnly="True"  Binding="{Binding ID}"/>
+                                <DataGridTextColumn Header="GroupMusicName" Binding="{Binding GroupMusicName}"/>
+                                <DataGridTextColumn Header="EmployeeTeacher ID" Binding="{Binding EmployeeTeacherID}"/>
+                                <DataGridTextColumn Header="EmployeeAccompanist ID " Binding="{Binding EmployeeAccompanistID}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

@@ -1,0 +1,167 @@
+﻿<Window x:Class="WpfMusicSchool.SaveWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfMusicSchool"
+        mc:Ignorable="d"
+        Title="SaveWindow" Height="350" Width="600">
+    <Grid>
+        <TabControl x:Name="SaveTabControl">
+            <TabItem x:Name="StudentTabItems">
+                <TabItem.Header>
+                    <StackPanel>
+                        <TextBlock>Student</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <StackPanel>
+                        <Grid Height="280">
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0">GroupMusicID</TextBlock>
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0">SpecilityID</TextBlock>
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0">Fio</TextBlock>
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="0">Telephone</TextBlock>
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="0">Gender</TextBlock>
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="0">Email</TextBlock>
+                            <TextBox x:Name="TextBoxStudentGroupMusicID" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0"  Width="154" Grid.Column="1"/>
+                            <TextBox x:Name="TextBoxStudentSpecilityID" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1"  Width="154" Grid.Column="1"/>
+                            <TextBox x:Name="TextBoxStudentFio" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2"  Width="154" Grid.Column="1"/>
+                            <TextBox x:Name="TextBoxStudentTelephone" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3"  Width="154" Grid.Column="1"/>
+                            <TextBox x:Name="TextBoxStudentGender" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4"  Width="154" Grid.Column="1"/>
+                            <TextBox x:Name="TextBoxStudentEmail" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5"  Width="154" Grid.Column="1"/>
+                            <Button  x:Name="Button_Student" Grid.Column="3" Grid.Row="5" IsDefault="True" HorizontalAlignment="Center" VerticalAlignment="Top" Height="46" Width="114" Margin="0,1,0,0" Click="Button_Click">Добавить</Button>
+                        </Grid>
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem>
+            <!--Вкладка добавления работкиа на окне-->
+            <TabItem x:Name="EmployeeTabItems">
+                <TabItem.Header>
+                    <StackPanel>
+                        <TextBlock>Employee</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <StackPanel>
+                        <Grid Height="280">
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0">PositionID</TextBlock>
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0">Fio</TextBlock>
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0">Telephone</TextBlock>
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="0">Gender</TextBlock>
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="0">Experience</TextBlock>
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="0">Email</TextBlock>
+                            <TextBox x:Name="TextBoxEmployeePositionID" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0"  Width="154" Grid.Column="1"/>
+                            <TextBox x:Name="TextBoxEmployeeFio" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1"  Width="154" Grid.Column="1"/>
+                            <TextBox x:Name="TextBoxEmployeeTelephone" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2"  Width="154" Grid.Column="1"/>
+                            <TextBox x:Name="TextBoxEmployeeGender" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3"  Width="154" Grid.Column="1"/>
+                            <TextBox x:Name="TextBoxEmployeeExperience" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4"  Width="154" Grid.Column="1"/>
+                            <TextBox x:Name="TextBoxEmployeeEmail" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5"  Width="154" Grid.Column="1"/>
+                            <Button  x:Name="Button_Employee" Grid.Column="3" Grid.Row="5" IsDefault="True" HorizontalAlignment="Center" VerticalAlignment="Top" Height="46" Width="114" Margin="0,1,0,0" Click="Button_Click">Добавить</Button>
+                        </Grid>
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem>
+            <!--Добавление концертов-->
+            <TabItem x:Name="ConcertTabItems">
+                <TabItem.Header>
+                    <StackPanel>
+                        <TextBlock>Concert</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <StackPanel>
+                        <Grid Height="280">
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0">GroupMusicID</TextBlock>
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0">GenreID</TextBlock>
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0">ConcertDate</TextBlock>
+                            <TextBox x:Name="TextBoxConcertGroupMusicID" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0"  Width="154" Grid.Column="1"/>
+                            <TextBox x:Name="TextBoxConcertGenreID" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1"  Width="154" Grid.Column="1"/>
+                            <TextBox x:Name="TextBoxConcertConcertDate" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2"  Width="154" Grid.Column="1"/>
+                            <Button  x:Name="Button_Concert" Grid.Column="3" Grid.Row="5" IsDefault="True" HorizontalAlignment="Center" VerticalAlignment="Top" Height="46" Width="114" Margin="0,1,0,0" Click="Button_Click">Добавить</Button>
+                        </Grid>
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem>
+            <!--Добавление концертов-->
+            <TabItem x:Name="GroupMusicTabItems">
+                <TabItem.Header>
+                    <StackPanel>
+                        <TextBlock>Concert</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <StackPanel>
+                        <Grid Height="280">
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0">GroupMusicName</TextBlock>
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0">EmployeeTeacherID</TextBlock>
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0">EmployeeAccompanistID</TextBlock>
+
+                            <TextBox x:Name="TextBoxGroupMusicGroupMusicName" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0"  Width="154" Grid.Column="1"/>
+                            <TextBox x:Name="TextBoxGroupMusicEmployeeTeacherID" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1"  Width="154" Grid.Column="1"/>
+                            <TextBox x:Name="TextBoxGroupMusicEmployeeAccompanistID" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2"  Width="154" Grid.Column="1"/>
+
+                            <Button  x:Name="Button_GroupMusic" Grid.Column="3" Grid.Row="5" IsDefault="True" HorizontalAlignment="Center" VerticalAlignment="Top" Height="46" Width="114" Margin="0,1,0,0" Click="Button_Click">Добавить</Button>
+                        </Grid>
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>
